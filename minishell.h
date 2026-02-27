@@ -13,9 +13,10 @@
 // Function prototypes
 char	**split_args(char *input);
 void	free_args(char **args);
-char	*find_command(char *cmd);
-void	execute_command(char **args);
+char	*find_command(char *cmd, char **envp);
+void	execute_command(char **args, char **envp);
 char	*process_directory(char *path_copy, char **dir_start, int i, char *cmd);
 char	*check_command_in_dir(char *dir, char *cmd);
+char    *get_path_from_env(char **envp);
 
 #endif
